@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form div label{
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        
+        form>div:not(:first-child){
+            display: flex;
+            align-items: center;
+        }
+
+        form>div:nth-child(2){
+            margin: 25px 0;
+        }
+
+        form>div:last-child{
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>Novell Services Login</h1>
+    <form>
+        <div>
+            <label for="name">Username:</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass">
+            <br>
+            <label for="city">City of Employment:</label>
+            <input type="text" name="city" id="city">
+            <br>
+            <label for="server">Web Server</label>
+            <select name="server" id="server">
+                <option value="" disabled selected>-- Choose A Server --</option>
+                <option value="one">Server 1</option>
+                <option value="two">Server 2</option>
+                <option value="three">Server 3</option>
+            </select>
+        </div>
+        <div>
+            <label>Please specify your role:</label>
+            <div>
+                <input type="radio" name="admin" id="admin">
+                <label for="admin">Admin</label>
+                <br>
+                <input type="radio" name="eng" id="eng">
+                <label for="eng">Engineer</label>
+                <br>
+                <input type="radio" name="mn" id="mn">
+                <label for="mn">Manager</label>
+                <br>
+                <input type="radio" name="g" id="g">
+                <label for="g">Guest</label>
+            </div>
+        </div>
+        <div>
+            <label>Single Sign-on to the following</label>
+            <div>
+                <input type="checkbox" name="mail" id="mail">
+                <label for="mail">Mail</label>
+                <br>
+                <input type="checkbox" name="pr" id="pr">
+                <label for="pr">Payroll</label>
+                <br>
+                <input type="checkbox" name="ss" id="ss">
+                <label for="ss">Self-service</label>
+            </div>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+
+</html>
